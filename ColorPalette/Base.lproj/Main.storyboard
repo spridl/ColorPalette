@@ -4,7 +4,6 @@
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="19519"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
-        <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
@@ -16,13 +15,6 @@
                         <rect key="frame" x="0.0" y="0.0" width="428" height="926"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <view tag="20" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="D9V-47-HxG">
-                                <rect key="frame" x="20" y="44" width="388" height="226"/>
-                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
-                                <constraints>
-                                    <constraint firstAttribute="width" constant="388" id="Srd-ba-M1B"/>
-                                </constraints>
-                            </view>
                             <stackView opaque="NO" contentMode="scaleToFill" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="27l-X1-UP8">
                                 <rect key="frame" x="20" y="316" width="388" height="103.66666666666669"/>
                                 <subviews>
@@ -86,17 +78,33 @@
                                                 <constraints>
                                                     <constraint firstAttribute="width" secondItem="wPX-Zf-hGp" secondAttribute="height" multiplier="245:29" id="Zgc-La-CGM"/>
                                                 </constraints>
+                                                <connections>
+                                                    <action selector="ColorSetting" destination="BYZ-38-t0r" eventType="valueChanged" id="x0I-ah-5BQ"/>
+                                                </connections>
                                             </slider>
                                             <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="0.5" minValue="0.0" maxValue="1" translatesAutoresizingMaskIntoConstraints="NO" id="MGS-H2-heb">
                                                 <rect key="frame" x="-2" y="37.333333333333314" width="250.66666666666666" height="30"/>
+                                                <connections>
+                                                    <action selector="ColorSetting" destination="BYZ-38-t0r" eventType="valueChanged" id="ufh-2S-0db"/>
+                                                </connections>
                                             </slider>
                                             <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="0.5" minValue="0.0" maxValue="1" translatesAutoresizingMaskIntoConstraints="NO" id="2OS-QH-P49">
                                                 <rect key="frame" x="-2" y="74.333333333333314" width="250.66666666666666" height="30.333333333333329"/>
+                                                <connections>
+                                                    <action selector="ColorSetting" destination="BYZ-38-t0r" eventType="valueChanged" id="Sv0-Tw-7ra"/>
+                                                </connections>
                                             </slider>
                                         </subviews>
                                     </stackView>
                                 </subviews>
                             </stackView>
+                            <view tag="20" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="D9V-47-HxG">
+                                <rect key="frame" x="20" y="44" width="388" height="226"/>
+                                <color key="backgroundColor" red="0.0" green="0.99143940210000003" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="388" id="Srd-ba-M1B"/>
+                                </constraints>
+                            </view>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" red="0.52550776363998286" green="0.53517294362524592" blue="0.81012494264005808" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
@@ -111,15 +119,19 @@
                             <constraint firstItem="27l-X1-UP8" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="bAm-bX-hdn"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="blueSlider" destination="2OS-QH-P49" id="AcA-KK-PRX"/>
+                        <outlet property="displayBlueLabel" destination="e5v-r3-NZp" id="XYh-Gt-m2b"/>
+                        <outlet property="displayGreenLabel" destination="sIU-Am-ZeX" id="ZLa-I1-siR"/>
+                        <outlet property="displayRedLabel" destination="lVx-f6-GIz" id="rcr-TA-0Z5"/>
+                        <outlet property="greenSlider" destination="MGS-H2-heb" id="eKg-y5-hx7"/>
+                        <outlet property="redSlider" destination="wPX-Zf-hGp" id="p28-o5-nlX"/>
+                        <outlet property="screenView" destination="D9V-47-HxG" id="l00-dC-Qwx"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="33.644859813084111" y="83.585313174946009"/>
         </scene>
     </scenes>
-    <resources>
-        <systemColor name="systemBackgroundColor">
-            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-        </systemColor>
-    </resources>
 </document>
