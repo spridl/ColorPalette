@@ -26,19 +26,19 @@
                                                 <constraints>
                                                     <constraint firstAttribute="width" secondItem="7rC-Hn-f4h" secondAttribute="height" multiplier="62:23" id="ch4-36-vCq"/>
                                                 </constraints>
-                                                <fontDescription key="fontDescription" name="Menlo-Regular" family="Menlo" pointSize="20"/>
+                                                <fontDescription key="fontDescription" name="Menlo-Regular" family="Menlo" pointSize="15"/>
                                                 <color key="textColor" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Green:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="m7e-hR-Zxi">
                                                 <rect key="frame" x="0.0" y="40.666666666666686" width="60.666666666666664" height="22.333333333333329"/>
-                                                <fontDescription key="fontDescription" name="Menlo-Regular" family="Menlo" pointSize="20"/>
+                                                <fontDescription key="fontDescription" name="Menlo-Regular" family="Menlo" pointSize="15"/>
                                                 <color key="textColor" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Blue:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="h7D-0d-BPD">
                                                 <rect key="frame" x="0.0" y="81" width="60.666666666666664" height="22.666666666666671"/>
-                                                <fontDescription key="fontDescription" name="Menlo-Regular" family="Menlo" pointSize="20"/>
+                                                <fontDescription key="fontDescription" name="Menlo-Regular" family="Menlo" pointSize="15"/>
                                                 <color key="textColor" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
@@ -47,24 +47,24 @@
                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" spacing="22" translatesAutoresizingMaskIntoConstraints="NO" id="HkQ-a7-dja">
                                         <rect key="frame" x="80.666666666666671" y="0.0" width="40.666666666666671" height="103.66666666666667"/>
                                         <subviews>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="lVx-f6-GIz">
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" text="0.1" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="lVx-f6-GIz">
                                                 <rect key="frame" x="0.0" y="0.0" width="40.666666666666664" height="20"/>
                                                 <constraints>
                                                     <constraint firstAttribute="width" secondItem="lVx-f6-GIz" secondAttribute="height" multiplier="41:20" id="1u1-v6-KA4"/>
                                                 </constraints>
-                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                <fontDescription key="fontDescription" name="Menlo-Regular" family="Menlo" pointSize="15"/>
                                                 <color key="textColor" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="sIU-Am-ZeX">
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="0.1" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="sIU-Am-ZeX">
                                                 <rect key="frame" x="0.0" y="42" width="40.666666666666664" height="19.666666666666671"/>
-                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                <fontDescription key="fontDescription" name="Menlo-Regular" family="Menlo" pointSize="15"/>
                                                 <color key="textColor" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="e5v-r3-NZp">
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="0.1" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="e5v-r3-NZp">
                                                 <rect key="frame" x="0.0" y="83.666666666666686" width="40.666666666666664" height="20"/>
-                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                <fontDescription key="fontDescription" name="Menlo-Regular" family="Menlo" pointSize="15"/>
                                                 <color key="textColor" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
@@ -120,12 +120,12 @@
                         </constraints>
                     </view>
                     <connections>
-                        <outlet property="blueSlider" destination="2OS-QH-P49" id="AcA-KK-PRX"/>
+                        <outlet property="blueSlider" destination="2OS-QH-P49" id="872-Ge-aHo"/>
                         <outlet property="displayBlueLabel" destination="e5v-r3-NZp" id="XYh-Gt-m2b"/>
                         <outlet property="displayGreenLabel" destination="sIU-Am-ZeX" id="ZLa-I1-siR"/>
                         <outlet property="displayRedLabel" destination="lVx-f6-GIz" id="rcr-TA-0Z5"/>
-                        <outlet property="greenSlider" destination="MGS-H2-heb" id="eKg-y5-hx7"/>
-                        <outlet property="redSlider" destination="wPX-Zf-hGp" id="p28-o5-nlX"/>
+                        <outlet property="greenSlider" destination="MGS-H2-heb" id="GbJ-Dn-lgB"/>
+                        <outlet property="redSlider" destination="wPX-Zf-hGp" id="iEj-oW-Kz1"/>
                         <outlet property="screenView" destination="D9V-47-HxG" id="l00-dC-Qwx"/>
                     </connections>
                 </viewController>
