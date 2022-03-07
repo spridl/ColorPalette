@@ -6,7 +6,6 @@
 //
 
 import UIKit
-//Greated by Nasim on 06.03.2022
 
 class ViewController: UIViewController {
     
@@ -20,27 +19,19 @@ class ViewController: UIViewController {
     @IBOutlet var greenSlider: UISlider!
     @IBOutlet var blueSlider: UISlider!
     
-    
     override func viewDidLoad() {
         super.viewDidLoad()
-        
-        redSlider.value = 0.1
-        redSlider.minimumTrackTintColor = .red
-        
-        greenSlider.value = 0.1
-        greenSlider.minimumTrackTintColor = .green
-        
-        blueSlider.value = 0.1
-        blueSlider.minimumTrackTintColor = .blue
+        screenView.layer.cornerRadius = screenView.frame.width / 60
+        screenView.backgroundColor = UIColor(
+            red: CGFloat(redSlider.value),
+            green: CGFloat(greenSlider.value),
+            blue: CGFloat(blueSlider.value), alpha: 1
+            )
     }
     
-    override func viewDidLayoutSubviews() {
-        screenView.layer.cornerRadius = screenView.frame.width / 60
-     }
-    
-    @IBAction func ColorSetting() {
+    @IBAction func colorSetting() {
         settingLabel()
-        
+    
         screenView.backgroundColor = UIColor(
             red: CGFloat(redSlider.value),
             green: CGFloat(greenSlider.value),
@@ -50,10 +41,11 @@ class ViewController: UIViewController {
     }
     
     private func settingLabel() {
-        displayRedLabel.text = String(redSlider.value)
-        displayGreenLabel.text = String(greenSlider.value)
-        displayBlueLabel.text = String(blueSlider.value)
+        displayRedLabel.text = String(format: "%.2f", redSlider.value)
+        displayGreenLabel.text = String(format: "%.2f", greenSlider.value)
+        displayBlueLabel.text = String(format: "%.2f", blueSlider.value)
     }
+    
 }
 
 
