@@ -7,24 +7,36 @@
 
 import UIKit
 
-class ViewController: UIViewController {
+class SettingViewController: UIViewController {
     
-    @IBOutlet var screenView: UIView!
+    @IBOutlet weak var screenView: UIView!
     
-    @IBOutlet var displayRedLabel: UILabel!
-    @IBOutlet var displayGreenLabel: UILabel!
-    @IBOutlet var displayBlueLabel: UILabel!
+    @IBOutlet weak var displayRedLabel: UILabel!
+    @IBOutlet weak var displayGreenLabel: UILabel!
+    @IBOutlet weak var displayBlueLabel: UILabel!
     
-    @IBOutlet var redSlider: UISlider!
-    @IBOutlet var greenSlider: UISlider!
-    @IBOutlet var blueSlider: UISlider!
+    @IBOutlet weak var redSlider: UISlider!
+    @IBOutlet weak var greenSlider: UISlider!
+    @IBOutlet weak var blueSlider: UISlider!
+    
+    var topVC: UIColor!
+    
+
     
     override func viewDidLoad() {
         super.viewDidLoad()
         screenView.layer.cornerRadius = 15
+        screenView.backgroundColor = topVC
+        
         setColor()
        setValue(for: displayRedLabel, displayGreenLabel, displayBlueLabel)
     }
+    
+    
+//    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+//        guard let resultVC = segue.destination as? TopViewController else { return }
+//        resultVC.settingVC.screenView.backgroundColor = self.view.backgroundColor
+//    }
     
     @IBAction func colorSetting(_ sender: UISlider) {
       setColor()
@@ -43,8 +55,9 @@ class ViewController: UIViewController {
             red: CGFloat(redSlider.value),
             green: CGFloat(greenSlider.value),
             blue: CGFloat(blueSlider.value),
-            alpha: 1.0
+            alpha: 1
         )
+        
     }
     
     private func setValue(for labels: UILabel...) {
