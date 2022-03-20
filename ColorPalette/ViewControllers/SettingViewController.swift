@@ -9,66 +9,93 @@ import UIKit
 
 class SettingViewController: UIViewController {
     
-    @IBOutlet weak var screenView: UIView!
+    @IBOutlet weak var colorView: UIView!
     
-    @IBOutlet weak var displayRedLabel: UILabel!
-    @IBOutlet weak var displayGreenLabel: UILabel!
-    @IBOutlet weak var displayBlueLabel: UILabel!
+    @IBOutlet weak var redLabel: UILabel!
+    @IBOutlet weak var greenLabel: UILabel!
+    @IBOutlet weak var blueLabel: UILabel!
     
     @IBOutlet weak var redSlider: UISlider!
     @IBOutlet weak var greenSlider: UISlider!
     @IBOutlet weak var blueSlider: UISlider!
     
-    var topVC: UIColor!
+    @IBOutlet var redTF: UITextField!
+    @IBOutlet var greenTF: UITextField!
+    @IBOutlet var blueTF: UITextField!
     
-
+    var topVC: UIColor!
+    var delegate: SettingViewControllerProtocol!
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        screenView.layer.cornerRadius = 15
-        screenView.backgroundColor = topVC
-        
-        setColor()
-       setValue(for: displayRedLabel, displayGreenLabel, displayBlueLabel)
+        colorView.layer.cornerRadius = 15
+        colorView.backgroundColor = topVC
+    
+        setColorSL()
+        setValue(for: redLabel, greenLabel, blueLabel)
+        showValue(for: redTF, greenTF, blueTF)
     }
     
-    
-//    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-//        guard let resultVC = segue.destination as? TopViewController else { return }
-//        resultVC.settingVC.screenView.backgroundColor = self.view.backgroundColor
-//    }
-    
+    // MARK: IBActions
     @IBAction func colorSetting(_ sender: UISlider) {
       setColor()
         switch sender {
         case redSlider:
-            displayRedLabel.text = string(from: redSlider)
+            redLabel.text = string(from: redSlider)
         case greenSlider:
-            displayGreenLabel.text = string(from: greenSlider)
+            greenLabel.text = string(from: greenSlider)
         default:
-            displayBlueLabel.text = string(from: blueSlider)
+            blueLabel.text = string(from: blueSlider)
         }
     }
     
+    @IBAction func buttonPressed() {
+        delegate.setColorView(for: colorView.backgroundColor ?? .white)
+        dismiss(animated: true)
+    }
+}
+
+extension SettingViewController: UITextFieldDelegate {
+    
+    // MARK: - Private Methods
     private func setColor() {
-        screenView.backgroundColor = UIColor(
+        colorView.backgroundColor = UIColor(
             red: CGFloat(redSlider.value),
             green: CGFloat(greenSlider.value),
             blue: CGFloat(blueSlider.value),
             alpha: 1
         )
-        
+    }
+    
+    private func setColorSL() {
+    let ciColor = CIColor(color: topVC)
+        redSlider.value = Float(ciColor.red)
+        greenSlider.value = Float(ciColor.green)
+        blueSlider.value = Float(ciColor.blue)
     }
     
     private func setValue(for labels: UILabel...) {
         labels.forEach { label in
             switch label  {
-            case displayRedLabel:
-                displayRedLabel.text = string(from: redSlider)
-            case displayGreenLabel:
-                displayGreenLabel.text = string(from: greenSlider)
+            case redLabel:
+                redLabel.text = string(from: redSlider)
+            case greenLabel:
+                greenLabel.text = string(from: greenSlider)
             default:
-                displayBlueLabel.text = string(from: blueSlider)
+                blueLabel.text = string(from: blueSlider)
+            }
+        }
+    }
+    
+    private func showValue(for texFields: UITextField...) {
+        texFields.forEach { texField in
+            switch texField  {
+            case redTF:
+            texField.text = string(from: redSlider)
+            case greenTF:
+                texField.text = string(from: greenSlider)
+            default:
+                texField.text = string(from: blueSlider)
             }
         }
     }
@@ -78,6 +105,3 @@ class SettingViewController: UIViewController {
     }
 }
 
-//blueSlider.value = Float.random(in: 0...1)
-//greenSlider.value = Float.random(in: 0...1)
-//blueSlider.value = Float.random(in: 0...1)
