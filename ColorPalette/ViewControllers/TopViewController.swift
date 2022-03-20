@@ -17,12 +17,13 @@ class TopViewController: UIViewController {
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         guard let resultVC = segue.destination as? SettingViewController else { return }
         resultVC.topVC = view.backgroundColor
-    }
+        resultVC.delegate = self
 }
-
+}
     extension TopViewController: SettingViewControllerProtocol{
         func setColorView(for colorValue: UIColor) {
             view.backgroundColor = colorValue
         }
 
     }
+
